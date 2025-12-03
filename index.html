@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 </head>
 <body>
     
@@ -40,16 +39,32 @@
         </div>
     </header>
 
-    <nav class="navigation-bar">
+     <nav class="navigation-bar">
         <div class="responsive-navbar-container">
-            <button class="menu-btn">menu</button>
+            
+            <div class="dark-navigation-btns-container">
+                <button id="menu-btn" style="background: none; color: inherit; border: 0; text-align: start; padding: 10px;">
+                    <i class="fa fa-bars" style="padding: 0; background:none;"></i> Menu
+                </button>
+
+                <div class="menu-list">
+                    <a href="index.html" class="home-link">HOME</a>
+                    <a href="" class="about-link">ABOUT US</a>
+                    <a href="" class="services-link">SERVICES</a>
+                    <a href="" class="gallery-link">GALLERY</a>
+                    <a href="" class="blog-link">BLOG</a>
+                    <a href="contact.html" class="contact-link">CONTACT</a>
+                </div>   
+                
+            </div>
+
             <div class="navigation-btns-container">
-                <a href="" class="home-link">HOME</a>
+                <a href="index.html" class="home-link">HOME</a>
                 <a href="" class="about-link">ABOUT US</a>
                 <a href="" class="services-link">SERVICES</a>
                 <a href="" class="gallery-link">GALLERY</a>
                 <a href="" class="blog-link">BLOG</a>
-                <a href="" class="contact-link">CONTACT</a>
+                <a href="contact.html" class="contact-link">CONTACT</a>
             </div>
         </div>
     </nav>
@@ -327,13 +342,14 @@
     <footer>
         <div class="footer-container">
             <div class="footer-content">
-                <div>
-                    <a href="">LawnCare</a>
+                <div class="footer-div">
+                    <a class="footer-logo" href="">Lawn<span>Care</span></a>
                     <p>Far far away, behind the word mountains,
                          far from the countries Vokalia and Consonantia,
                           there live the blind texts.
                     </p>
-                    <a href="">
+                    <div>
+                        <a href="">
                         <span href="#" class="fa fa-facebook"></span>
                     </a>
                     <a href="">
@@ -342,41 +358,58 @@
                     <a href="">
                         <span href="#" class="fa fa-instagram"></span>
                     </a>
+                    </div>
+                    
                 </div>
-                <div>
+                <div class="footer-div">
                     <h2>Services</h2>
                     <div class="links">
-                        <a href="">Garden Care</a>
-                        <a href="">Garden Care</a>
-                        <a href="">Garden Care</a>
-                        <a href="">Garden Care</a>
-                        <a href="">Garden Care</a>
+                        <ul>
+                            <li>
+                                 <a href="">Garden Care</a>
+                            </li>
+                            <li>
+                                 <a href="">Lawn mowing</a>
+                            </li>
+                            <li>
+                                 <a href="">Lawn Care</a>
+                            </li>
+                            <li>
+                                 <a href="">Gutter cleaning</a>
+                            </li>
+                            <li>
+                                 <a href="">New lawn installation</a>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
-                <div>
+                <div class="footer-div">
                    <h2>Contact information</h2> 
-                    <ul>
+                    <ul class="contact-list">
                         <li>
-                            <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span style="color: #ffffffb3;">203 Fake St. Mountain View, San Francisco, California, USA</span>
                         </li>
                         <li>
+                            <span><i class="fa fa-phone"></i></span>
                             <span>+2 392 3929 210</span>
                         </li>
                         <li>
+                            <span><i class="fa fa-envelope"></i></span>
                             <span>info@yourdomain.com</span>
                         </li>
                     </ul>
 
                 </div>
-                <div>
+                <div class="footer-div">
                   <h2>Business Hours</h2> 
 
                   <div class="openning-hrs">
-                    <h4>Opening Days</h4>
-                    <p>Monday – Friday : 9am to 20 pm Saturday : 9am to 17 pm</p>
-                    <h4>Vacations</h4>
-                    <p>All Sunday Days All Official Holidays</p>
+                    <h4 style="color: #fbd341;">Opening Days</h4>
+                    <p style="padding-left: 20px;">Monday - Friday : 9am to 20 pm Saturday : 9am to 17 pm</p>
+                    <h4 style="color: #fbd341;">Vacations</h4>
+                    <p style="padding-left: 20px;">All Sunday Days All Official Holidays</p>
                   </div>
                 </div>
             </div>

@@ -38,10 +38,12 @@ body{
 }
 header{
     display: flex;
-    flex: 1 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
     justify-content: space-between;
+    align-items: center;
     margin: 0 80.5px;
-    padding: 48px 15px 24px;
+    padding: 48px 0 24px 0;
 }
 
 .left-div{
@@ -51,7 +53,7 @@ header{
     align-content: center;
 }
 
-.center-div a{
+.logo{
     text-decoration: none;
     color: black;
     font-size: 32px;
@@ -60,7 +62,7 @@ header{
     margin:0px 16px 30px 0px;
 }
 
-.center-div span{
+.logo span{
     color: #4e9525;
 }
 
@@ -91,19 +93,44 @@ header{
 /* nav bar styles */
 
 .responsive-navbar-container{
-    background-color: #4e9525;
     width: 100%;
+    background-color: #4e9525;
+}
 
-}
-.menu-btn{
-    display: none;
-}
 
 .navigation-btns-container{
     width: 50%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+}
+
+.dark-navigation-btns-container{
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #252525;
+    padding: 20px;
+    width: 100%;
+    display: none;
+}
+
+.menu-list{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    display: none;
+}
+
+.menu-list.active {
+        display: flex; 
+}
+
+
+.dark-navigation-btns-container a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .navigation-btns-container a{
@@ -158,6 +185,7 @@ header{
 
 .hero-content{
     width: 50%;
+    animation: fadeInUp 1s;
 }
 
 .hero-content h2{
@@ -241,6 +269,7 @@ header{
 
 .quote-div{
     max-width: 300px;
+    animation: fadeInUp 1s;
 }
 
 .quote-div h2{
@@ -424,6 +453,7 @@ header{
 
 .testimonial-card-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
@@ -542,6 +572,12 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s;
+}
+
+.newsletter-container.show{
+    animation: fadeInUp 1s;
 }
 
 .subscribe-btn{
@@ -559,17 +595,268 @@ header{
 
 footer{
     background-color: #252525;
+    align-items: center;
 }
 
 .footer-content{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 50px;
-    padding: 48px 80px;
+    padding: 48px 0;
+    flex-wrap: wrap;
 }
 
 .footer-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
+    
 }
+
+.footer-logo{
+    text-decoration: none;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.footer-logo span{
+    color: #4e9525;
+}
+
+.footer-div{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-div h2{
+    color: white;
+}
+
+
+
+.links{
+    padding-left: 20px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: #4e9525;
+}
+
+
+.links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    position: relative;
+}
+
+.links li{
+    position: relative;
+}
+.links li:hover{
+   color: #4e9525;
+}
+
+.links li:before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: -25px;
+    border-right:2px solid rgb(255, 255, 255);
+    border-bottom:2px solid rgb(255, 255, 255);
+    width:5px;
+    height:5px;
+    transform: rotate(-45deg);
+}
+
+
+.contact-list{
+    list-style-type: none;
+    color: white;
+}
+
+.fa-map{
+
+    color: white;
+    background: none;
+    padding: 0;
+}
+
+li .fa{
+    color: white;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+li .fa:hover{
+    background: none;
+}
+
+.contact-hero-section{
+    background-image: url("../images/yard.jpg");
+    background-position: 50%;
+    height: 30vh;
+    background-size: cover;
+}
+
+.contact-title{
+    background-color:rgba(37, 37, 37, 0.1);
+    text-align: center;
+    align-content: end;
+    height: 100%;
+    padding-bottom: 50px;
+    color: white;
+    animation: fadeInUp 1s;
+}
+
+.contact-title h1{
+    font-size: 60px;
+}
+
+.contact-title a{
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    width: 250px;
+    text-align: center;
+}
+
+.info i{
+    padding: 0;
+}
+
+.contact-info{
+    width: 100%;
+    margin: auto;
+}   
+
+.contact-us-section{
+    padding: 112px 0;
+    background-color: rgba(128, 128, 128, 0.1)
+}
+
+.contact-image{
+    width: 50vh;
+    background-image: url("../images/yard.jpg");
+    background-size: cover;
+}
+
+
+
+.content-div{
+    padding: 48px;
+    width: 50vh;
+    background-color: white;
+}
+
+.content-div h1{
+    color: black;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.content-div p{
+    padding-bottom: 10px;
+}
+label{
+    text-transform: uppercase;
+    color: #4e9525;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group input{
+    background: none;
+    border: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    outline: none;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.send-btn{
+    background-color: #4e9525;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: 0;
+}
+
+textarea{
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    color: inherit;
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+
+@media (min-width: 1024px) {
+    
+}
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 768px) {
+    .navigation-btns-container{
+        display: none;
+    }
+    .dark-navigation-btns-container{
+        display: flex;
+    }
+   
+
+}
+@media (max-width: 320px) {
+    
+}
+
+
+/* animations */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
