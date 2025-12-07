@@ -24,7 +24,6 @@ body{
   text-decoration: none;
   border-radius: 50%;
   background-color: rgba(128, 128, 128, 0.2);
-  padding-left: 20px;
 }
 
 .fa-search{
@@ -38,20 +37,32 @@ body{
 }
 header{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-shrink: 1;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin: 0 80.5px;
     padding: 48px 0 24px 0;
 }
 
+.header-wrapper{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .left-div{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-evenly;
     align-content: center;
+    text-align: center;
 }
+.right-div{
+    justify-content: end;
+}
+
 
 .logo{
     text-decoration: none;
@@ -296,9 +307,10 @@ header{
 /* welcome section */
 
 .welcome-container{
-    margin: 0 200px;
+    margin: 100px 0;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .side-image{
@@ -345,6 +357,9 @@ header{
 .welcome-content{
     width: 50vh;
     padding-top: 30px;
+    animation: fadeInUp 1s;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .welcome-content div{
@@ -352,6 +367,7 @@ header{
     flex-direction: column;
     gap: 20px;
 }
+
 .welcome-section-card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
     border-radius: 4px;
@@ -402,10 +418,12 @@ header{
 
 .tips-header{
     text-align: center;
+    animation: fadeInUp 1s;
 }
 
 .testimonial-section{
     text-align: center;
+    animation: fadeInUp 1s;
 }
 
 .slide-btns{
@@ -481,11 +499,17 @@ header{
 .blog-section{
     background-color: rgba(128, 128, 128, 0.1);
     padding: 20px 0px 112px 0px;
+    animation: fadeInUp 1s;
+}
+
+.cta{
+    animation: fadeInUp 1s;
 }
 
 .blog-card-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -633,6 +657,11 @@ footer{
     gap: 40px;
 }
 
+.socialmedia-links{
+    text-align: center;
+    animation: fadeInUp 1s;
+}
+
 .footer-div h2{
     color: white;
 }
@@ -732,8 +761,10 @@ li .fa:hover{
 
 .contact-info{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .info{
@@ -843,7 +874,33 @@ textarea{
 
 }
 @media (max-width: 320px) {
-    
+   .hero-content h1{
+    font-size: 32px;
+   }
+   .hero-content p{
+    font-size: 16px;
+   }
+   .container{
+    padding: 0;
+    justify-content: center;
+   }
+   .service-flex{
+    padding: 0;
+   }
+   .subscribe-btn{
+    padding: 0;
+   }
+   .go-btn{
+    right: 0;
+   }
+   .play-button{
+    display: none;
+   }
+   header{
+    margin: 0;
+    justify-content: center;
+    gap: 10px;
+   }
 }
 
 
